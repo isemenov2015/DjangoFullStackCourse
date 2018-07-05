@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hotel feedback</title>
+  </head>
+  <body>
+    <h1>Hotel feedback form</h1>
+
+    <form method="get">
+      <h3>Are you a resident of Bermudas?</h3>
+
+      <label for="inbermudas">Resident:</label>
+      <input id="inbermudas" type="radio" name="loc" value="inside">
+      <label for="outbermudas">Non resident</label>
+      <input id="outbermudas" type="radio" name="loc" value="outside">
+
+      <h3>How was your service?</h3>
+      <select name="stars">
+        <option value="terrific">3</option>
+        <option value="ok">2</option>
+        <option value="bad">1</option>
+      </select>
+
+      <h3>Any other feedback?</h3>
+      <textarea name="mytext" rows="8" cols="80"></textarea>
+      <p>
+        <input type="submit" name="" value="Submit!">
+      </p>
+    </form>
+  </body>
+</html>
