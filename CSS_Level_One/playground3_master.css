@@ -1,0 +1,30 @@
+.firstDiv{
+  color: red;
+}
+.secondDiv{
+  color: blue;
+}
+
+#singledout{
+  color: green;
+  text-decoration: underline;
+}
+
+/*
+*{
+  color: black;
+}
+*/
+
+h3 + ul {
+  border: 4px dotted purple;
+}
+
+li a {
+  color: orange;
+}
+
+li a[href="https://www.google.com"] {
+  color: darkblue;
+  border: 4px solid black;
+}
