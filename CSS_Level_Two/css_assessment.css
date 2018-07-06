@@ -1,0 +1,32 @@
+h1{
+  font-family: 'Wendy One', sans-serif;
+  text-align: center;
+}
+
+table{
+  margin: auto;
+}
+
+td{
+  background-color: green;
+  width: 120px;
+  height: 250px;
+  table-layout: fixed;
+  border: 4px solid white;
+}
+
+#c1{
+  background-color: #ED976B;
+}
+#c2{
+  background-color: #c16e49;
+}
+#c3{
+  background-color: #87b272;
+}
+#c4{
+  background-color: #546d45;
+}
+#c5{
+  background-color: #ead9ce;
+}
