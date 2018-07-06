@@ -1,0 +1,31 @@
+h1{
+  font-family: "Arial";
+}
+
+p{
+  font-family: monospace;
+}
+
+/*
+body{
+  font-size: 20px;
+}
+*/
+
+body{
+  font-size: 20px; /* base font size */
+}
+
+#two{
+  font-size: 1.5em;
+  font-family: 'Gaegu', cursive;
+}
+
+p{
+  font-style: italic;
+  font-weight: bolder;
+}
+
+h1{
+  text-align: center;
+}
