@@ -1,0 +1,38 @@
+body{
+  background-color: #081c3d;
+  color: #eff1f4;
+  font-family: 'Mandali', sans-serif;
+  text-align: center;
+  border: 60px solid lightblue;
+  border-top: 0px;
+  margin: 0px;
+}
+
+input{
+  margin-top: 0px;
+}
+
+p{
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+form{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.userinput{
+  font-size: 1.2em;
+}
+
+#submit_button{
+  border-radius: 20px;
+  font-size: 1.05em;
+  width: 160px;
+  height: 80px;
+  background-color: orange;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
