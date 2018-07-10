@@ -48,3 +48,10 @@ while(x < 5){
 // QUICK EXERCISE
 
 // Write a while loop that prints out only the even numbers from 1 to 10.
+var i = 1
+while (i < 11) {
+  if (i % 2 === 0) {
+    console.log("Even number encountered " + i);
+  }
+  i = i + 1;
+}
