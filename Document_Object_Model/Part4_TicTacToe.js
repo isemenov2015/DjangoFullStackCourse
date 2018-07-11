@@ -2,21 +2,18 @@
 var cells = document.querySelectorAll("td");
 var btn = document.querySelector("#button");
 
-function getText(chr) {
-  if (chr === " ") {
-    return "X";
+function setText() {
+  if (this.textContent === " ") {
+    this.textContent = "X";
+  } else if (this.textContent === "X") {
+    this.textContent = "O";
+  } else {
+    this.textContent = " ";
   }
-  if (chr === "X") {
-    return "O";
-  }
-  return " ";
 }
 
 for (c of cells) {
-  c.addEventListener("click",
-            function() {
-                this.textContent = getText(this.textContent);
-            });
+  c.addEventListener("click", setText);
 }
 
 btn.addEventListener("click", function(){
