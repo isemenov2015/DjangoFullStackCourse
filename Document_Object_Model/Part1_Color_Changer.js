@@ -1,4 +1,4 @@
-// Alright so we've discussed the way you can grab html elements, let's
+ // Alright so we've discussed the way you can grab html elements, let's
 // see how we can interact with them in Javascript!
 
 // Type this into your console:
@@ -34,4 +34,4 @@ function changeHeaderColor(){
 }
 
 // Now perform the action over intervals (milliseocnds):
-setInterval("changeHeaderColor()",500);
+setInterval("changeHeaderColor()",1000);
