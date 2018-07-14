@@ -25,11 +25,42 @@
 import random
 digits = list(range(10))
 random.shuffle(digits)
-print(digits[:3])
+digits = "".join(str(x) for x in digits[:3])
+print(digits)
 
 # Another hint:
-guess = input("What is your guess? ")
-print(guess)
+gameover = False
 
 # Think about how you will compare the input to the random number, what format
 # should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
+while not gameover:
+    guess = input("What is your guess? ")
+    if len(guess) != 3:
+        print("Wrong input, three digits expected")
+        continue
+    correct_input = True
+    for chr in guess:
+        if not chr in "0123456789":
+            correct_input = False
+    if not correct_input:
+        print("Wrong input, only digits accepted")
+        continue
+    if guess == digits:
+        print("You won! Computer guessed {}".format(digits))
+        gameover = True
+        continue
+    is_nope = True
+    for chr in guess:
+        if chr in digits:
+            is_nope = False
+    if is_nope:
+        print("Nope")
+        continue
+    is_match = False
+    for i, chr in enumerate(guess):
+        if chr == digits[i]:
+            is_match = True
+    if is_match:
+        print("Match")
+        continue
+    print("Close")
