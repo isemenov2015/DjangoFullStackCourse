@@ -39,7 +39,7 @@ def populate_users(N = 5):
         fake_name = fname[0]
         fake_surname = fname[1]
         fake_email = fakegen.email()
-        usr = User.objects.get_or_create(name = fake_name, surname = fake_surname, email = fake_email)
+        usr = User.objects.get_or_create(name = fake_name, surname = fake_surname, email = fake_email)[0]
 
 if __name__ == "__main__":
     print("Populating script...")
