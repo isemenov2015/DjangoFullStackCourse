@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registered users</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+  </head>
+  <body>
+    <h1>Here are your users:</h1>
+    <div class="userlist">
+      <ol>
+      {% if users_list %}
+        {% for usr in users_list %}
+        <li>User info <br>
+          <ul>
+            <li>
+              First name: {{usr.name}}
+            </li>
+            <li>
+              Last name: {{usr.surname}}
+            </li>
+            <li>
+              Email: {{usr.email}}
+            </li>
+          </ul>
+        </li>
+        {% endfor %}
+      {% else %}
+        <p>No registered users yet</p>
+      {% endif %}
+      </ol>
+    </div>
+  </body>
+</html>

@@ -3,14 +3,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>App #3</title>
+    <title>Django Level 2, app No 3</title>
     <link rel="stylesheet" href="{% static "css/style.css" %}">
   </head>
   <body>
-    <h1>Hi, this is a test page!</h1>
-    <h2>{{ insert_content }}</h2>
-    <p></p>
-    <h2>An example of static image webpage insertion</h2>
-    <img src="{% static "images/pic.jpg" %}" alt="Img loading error">
+    <h1>Hi, I'm app No 3 from Django level Two</h1>
+    <h2>AccessRecords list:</h2>
+    <div class="djangotwo">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>Sute name</th>
+            <th>Date accessed</th>
+          </thead>
+          {% for acc in access_records %}
+            <tr>
+              <td>{{ acc.name }}</td>
+              <td>{{ acc.date }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p>No access records found</p>
+      {% endif %}
+    </div>
   </body>
 </html>

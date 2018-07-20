@@ -19,6 +19,7 @@ from appThree import views
 
 urlpatterns = [
     path("", views.index, name = 'index'),
+    path("users/", views.users, name = 'users'),
     path('admin/', admin.site.urls),
     path('appThree/', include('appThree.urls'))
 ]
