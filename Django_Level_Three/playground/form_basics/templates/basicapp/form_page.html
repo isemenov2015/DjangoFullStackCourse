@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FORMS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fill out the form!</h1>
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
