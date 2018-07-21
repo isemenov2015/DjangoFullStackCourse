@@ -1,5 +1,6 @@
 from django.contrib import admin
 from appThree.models import AccessRecord, Topic, Webpage, User
+
 # Register your models here.
 admin.site.register(AccessRecord)
 admin.site.register(Topic)

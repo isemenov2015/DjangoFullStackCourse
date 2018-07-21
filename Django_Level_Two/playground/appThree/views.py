@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from appThree.models import Topic, Webpage, AccessRecord, User
+from appThree.models import Topic, Webpage, AccessRecord
+from appThree.forms import NewUserForm
 
 # Create your views here.
 def index(request):
@@ -8,6 +9,13 @@ def index(request):
     return render(request, 'appThree/index.html', context = fields_dict)
 
 def users(request):
-    users_list = User.objects.order_by("surname")
-    fields_dict = {"users_list": users_list}
-    return render(request, 'appThree/users.html', context = fields_dict)
+    form = NewUserForm()
+
+    if request.method == 'POST':
+        form = NewUserForm(request.POST)
+        if form.is_valid():
+            form.save(commit = True)
+            return index(request)
+        else:
+            print("ERROR. FORM INVALID")
+    return render(request, 'appThree/users.html', {'form': form})

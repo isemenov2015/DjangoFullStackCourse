@@ -5,27 +5,14 @@
     <meta charset="utf-8">
     <title>Django Level 2, app No 3</title>
     <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hi, I'm app No 3 from Django level Two</h1>
-    <h2>AccessRecords list:</h2>
-    <div class="djangotwo">
-      {% if access_records %}
-        <table>
-          <thead>
-            <th>Sute name</th>
-            <th>Date accessed</th>
-          </thead>
-          {% for acc in access_records %}
-            <tr>
-              <td>{{ acc.name }}</td>
-              <td>{{ acc.date }}</td>
-            </tr>
-          {% endfor %}
-        </table>
-      {% else %}
-        <p>No access records found</p>
-      {% endif %}
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Hi, I'm app No 3 from Django level Two</h1>
+        <h2>Go to /users to sign up!</h2>
+      </div>
     </div>
   </body>
 </html>

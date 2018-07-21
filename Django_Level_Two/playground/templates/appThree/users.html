@@ -5,31 +5,16 @@
     <meta charset="utf-8">
     <title>Registered users</title>
     <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Here are your users:</h1>
-    <div class="userlist">
-      <ol>
-      {% if users_list %}
-        {% for usr in users_list %}
-        <li>User info <br>
-          <ul>
-            <li>
-              First name: {{usr.name}}
-            </li>
-            <li>
-              Last name: {{usr.surname}}
-            </li>
-            <li>
-              Email: {{usr.email}}
-            </li>
-          </ul>
-        </li>
-        {% endfor %}
-      {% else %}
-        <p>No registered users yet</p>
-      {% endif %}
-      </ol>
+    <div class="container">
+      <h1>Please, sign up here!</h1>
+      <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class = "btn btn-primary" value="Submit">
+      </form>
     </div>
   </body>
 </html>
