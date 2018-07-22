@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "appFour/base.html" %}
+  {% load my_extras %}
+  {% block body_block %}
+    <h1>This is an INDEX page</h1>
+    <h2>This is an index.html showing!</h2>
+    <h1>{{ text|upper }}</h1> <br>
+    <h1>{{ text|cut_str:'Hello' }}</h1> <br>
+    <h1>{{ text|cut_dots:'World' }}</h1> <br>
+    <h1>{{ number|add:"13" }}</h1>
+  {% endblock %}
