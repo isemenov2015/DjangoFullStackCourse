@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.models import UserProfileInfo
+from django.contrib.auth.models import User
 from appFive.models import UserProfileInfo
 
 class UserForm(forms.ModelForm):
@@ -12,4 +12,4 @@ class UserForm(forms.ModelForm):
 class UserProfileInfoForm(forms.ModelForm):
     class Meta():
         model = UserProfileInfo
-        fields = ('protfolio_site', 'profile_pic')
+        fields = ('portfolio_site', 'profile_pic')
