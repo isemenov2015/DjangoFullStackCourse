@@ -135,3 +135,5 @@ STATICFILES_DIRS = [STATIC_DIR,]
 #MEDIA setup
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+LOGIN_URL = 'appFive/user_login'

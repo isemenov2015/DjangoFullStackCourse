@@ -22,4 +22,6 @@ urlpatterns = [
     url(r"^$", views.index, name = 'index'),
     url(r"^appFive/", include('appFive.urls')),
     path('admin/', admin.site.urls),
+    path('logout/', views.user_logout, name = 'logout'),
+    url(r'special/', views.special, name = 'special')
 ]

@@ -12,6 +12,12 @@
           <li> <a class = "navbar-brand" href="{% url 'index'%}">DJANGO</a></li>
           <li> <a class = "navbar-link" href="{% url 'admin:index' %}">Admin</a> </li>
           <li> <a class = "navbar-link" href="{% url 'appFive:register' %}">Register</a> </li>
+
+          {% if user.is_authenticated %}
+            <li> <a class = "navbar-link" href="{% url 'logout' %}">Logout</a> </li>
+          {% else %}
+            <li> <a class = "navbar-link" href="{% url 'appFive:user_login' %}">Login</a> </li>
+          {% endif %}
         </ul>
       </div>
     </nav>
