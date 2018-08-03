@@ -48,7 +48,7 @@ class DraftListView(LoginRequiredMixin, ListView):
     model = Post
 
     def get_queryset(self):
-        return Post.objects.filter(published_date__isnull = True).order_by('create_date')
+        return Post.objects.filter(published_date__isnull = True).order_by('created_date')
 
 
 @login_required
@@ -61,8 +61,8 @@ def add_comment_to_post(request, pk):
             comment.post = post
             comment.save()
             return redirect('post_detail', pk = post.pk)
-        else:
-            form = CommentForm()
+    else:
+        form = CommentForm()
     return render(request, 'blog/comment_form.html', {'form': form})
 
 @login_required
