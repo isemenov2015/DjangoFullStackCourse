@@ -6,6 +6,7 @@ from django.views import generic
 from groups.models import Group, GroupMember
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
+from . import models
 
 # Create your views here.
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
@@ -38,7 +39,7 @@ class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
     def get(self, request, *args, **kwargs):
         try:
             membership = models.GroupMember.objects.filter(
-                users = self.request.user,
+                user = self.request.user,
                 group__slug=self.kwargs.get('slug')
             ).get()
         except models.GroupMember.DoesNotExist:
